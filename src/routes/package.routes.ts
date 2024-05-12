@@ -4,9 +4,6 @@ import validate from "../middlewares/validation"
 import { packageSchema } from "../helpers/validators"
 
 
-
-
-
 const router=express.Router()
 
 router.post("/submit", [validate(packageSchema)], PackageController.submitPackage)
