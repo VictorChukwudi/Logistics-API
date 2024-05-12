@@ -29,4 +29,11 @@ export class UserService{
         const user = await userRepository.findOneBy({email})
         return user
     }
+
+    static async findUserById(id: string){
+        const userRepository = AppDataSource.getRepository(User)
+        const user = await userRepository.findOneBy({id})
+        return user
+    }
+
 }

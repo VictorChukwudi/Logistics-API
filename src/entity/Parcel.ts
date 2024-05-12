@@ -7,15 +7,18 @@ export class Parcel {
   id: string;
 
   @Column()
-  name: string;
+  packageName: string;
 
-  @Column({ type: "enum", enum: ["pending", "in-transit", "delivered"], default: "pending" })
+  @Column({ type: "enum", enum: ["pending", "in-transit", "out-for-delivery", "delivered"], default: "pending" })
   status: string;
 
   @Column({ type: "date" })
   pickupDate: Date;
 
-  @Column({ type: "timestamp" })
+  @Column({type: "json"})
+  recipient: { name: string, address: string, phone: string };
+
+  @Column({ type: "timestamp with time zone", default: ()=> "CURRENT_TIMESTAMP"})
   timestamp: Date;
 
   

@@ -25,3 +25,18 @@ export const loginSchema = Joi.object({
         .required()
 })
 .with("email", "password")
+
+export const packageSchema = Joi.object({
+    packageName: Joi.string()
+        .required(),
+    pickupDate: Joi.date()
+        .required(),
+    recipient: Joi.object({
+        name: Joi.string()
+            .required(),
+        address: Joi.string()
+            .required(),
+        phone: Joi.string()
+            .required()
+    }).required()
+})
