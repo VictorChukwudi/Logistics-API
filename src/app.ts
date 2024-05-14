@@ -11,6 +11,10 @@ app.use(express.json())
 
 
 app.use("/api", router)
+
+app.get("/", (req, res)=>{
+  res.send("Logistics API is live.")
+})
     
 AppDataSource.initialize()
   .then(async () => {

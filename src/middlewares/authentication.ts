@@ -22,7 +22,7 @@ export const authenticate = async (req: Request, res: Response, next: NextFuncti
           }
         });
       } else {
-        res.status(403).json({
+        res.status(401).json({
           status: "Error",
           msg: "Unauthorized. Login or register to view this resource",
         });
