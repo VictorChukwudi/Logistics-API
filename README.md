@@ -15,8 +15,8 @@ This project is a logistics API built with Node.js, Express, Typescript, Postgre
 - Express.js: Web framework for building APIs with Node.js. (https://expressjs.com/)
 - Typescript: Superset of JavaScript that adds static typing for improved code maintainability. (https://www.typescriptlang.org/docs)
 - Postgresql: SQL database for storing user information and packages. (https://www.mongodb.com/)
-- Typeorm: Typescript based ORM for SQL fast, quick and easy SQL database transactions
-- Docker: Service for application containerization
+- Typeorm: Typescript based ORM for SQL fast, quick and easy SQL database transactions (https://typeorm.io/)
+- Docker: Service for application containerization (https://docker.com)
 
 ## Prerequisite
 1. Docker desktop
