@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
   db:
     image: postgres:latest
@@ -17,11 +17,16 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/node_modules
     environment:
       - PORT=8000
+      - DB_HOST=db
       - DB_USERNAME=postgres
       - DB_DATABASE=logistics-api
       - DB_PASSWORD=logistics123
+      - JWT_SECRET=secret
     depends_on:
       - db
 volumes:

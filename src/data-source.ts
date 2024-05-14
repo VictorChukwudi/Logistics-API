@@ -7,13 +7,14 @@ import { Parcel } from "./entity/Parcel"
 
 dotenv.config()
 const {
+    DB_HOST,
     DB_USERNAME,
     DB_PASSWORD,
     DB_DATABASE,
 }= process.env
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
+    host: DB_HOST,
     port: 5432,
     username: DB_USERNAME,
     password: DB_PASSWORD,
