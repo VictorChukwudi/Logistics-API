@@ -58,10 +58,10 @@ This project is a logistics API built with Node.js, Express, Typescript, Postgre
 3. Use the obtained token to access protected endpoints for user actions - submission, tracking of packages and automatically updating delivery status of packages.
    
 ## Deploy
-Click [here]() to access a deployed version of this API
+Click [here](https://logistics-api-2y0k.onrender.com) to access a deployed version of this API
    
 ## Documentation
-Click [here](https://documenter.getpostman.com/view/19721625/2sA35MxJGP) to get the full documentation of this API.
+Click [here](https://documenter.getpostman.com/view/19721625/2sA3JQ5Kuz) to get the full documentation of this API.
 
 
 
