@@ -29,4 +29,10 @@ export class PackageService {
 
         return await parcelRepository.save(parcel)
     }
+
+    static async getAllPackages(){
+        const parcelRepository = AppDataSource.getRepository(Parcel)
+        const parcels = await parcelRepository.find()
+        return parcels
+    }
 }

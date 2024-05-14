@@ -6,6 +6,7 @@ import { packageSchema } from "../helpers/validators"
 
 const router=express.Router()
 
+router.get("/", PackageController.getAllPackages)
 router.post("/submit", [validate(packageSchema)], PackageController.submitPackage)
 router.get("/:packageId", PackageController.trackPackage)
 router.post("/:packageId/update", PackageController.automateStatusUpdate)

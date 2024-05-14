@@ -115,4 +115,35 @@ export class PackageController{
             })
         }
     }
+
+    static async getAllPackages(req: Request, res: Response){
+        try {
+            const userId = req["user"].id
+            const user = await UserService.findUserById(userId)
+            const packages = await PackageService.getAllPackages()
+            let fetchedPackages=[];
+
+            const responseDto = new PackageDto()
+            packages.forEach((packageData) => {
+                responseDto.id = packageData.id
+                responseDto.packageName = packageData.packageName
+                responseDto.pickupDate = packageData.pickupDate
+                responseDto.status = packageData.status
+                responseDto.recipient = packageData.recipient
+                responseDto.timestamp = packageData.timestamp
+
+                fetchedPackages.push(responseDto)
+            })
+            res.status(200).json({
+                status:"success",
+                message:"Packages fetched.",
+                data: fetchedPackages
+            })
+        } catch (error) {
+            res.status(500).json({
+                status:"error",
+                message:error.message
+            })
+        }
+    }
 }
