@@ -65,6 +65,15 @@ Click [here](https://logistics-api-2y0k.onrender.com) to access a deployed versi
 Click [here](https://documenter.getpostman.com/view/19721625/2sA3JQ5Kuz) to get the full documentation of this API.
 
 
-
+## MOCK DATA
+You can login with any of these login credentials to test with existing dummy data:
+1. email: doe@email.com , password: 12345
+2. email: haggish@email.com , password: 12345
+3. email: yalden@email.com , password: 12345
+4. email: gadson@email.com , password: 12345
+5. email: thiolier@email.com , password: 12345
+6. email: curnow@email.com , password: 12345
+7. email: kiwitz@email.com , password: 12345
+8. email: manuely@email.com , password: 12345
 
 
