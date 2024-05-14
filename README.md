@@ -50,6 +50,7 @@ This project is a logistics API built with Node.js, Express, Typescript, Postgre
 - `POST /api/packages/submit:` Submit a package for delivery.
 - `GET /api/packages/:packageId:` Track a package delivery status - pending, in-transit, out-for-delivery, delivered.
 - `POST /api/packages/:packageId/update:` To simulate automatic package status update every 2 minutes.
+- `GET /api/packages/:` Gets all packages.
 
   
 ## Usage
